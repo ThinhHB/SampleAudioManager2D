@@ -10,33 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 345d652e1734a45458788f5c64ddcda3, type: 3}
-  m_Name: BGM_LoopTrack
+  m_Name: UnMute_BGM
   m_EditorClassIdentifier: 
   basicCfg:
-    activePlayAudio: 1
-    clip: {fileID: 8300000, guid: faa0a311d8ea972499d6227ebcd57fc7, type: 3}
-    mixerGroup: {fileID: 243037491652502468, guid: 212b24c27efd74f4e9b103b22e1089b2,
-      type: 2}
-    clipType: 1
+    activePlayAudio: 0
+    clip: {fileID: 0}
+    mixerGroup: {fileID: 0}
+    clipType: 0
   loopCfg:
-    active: 1
+    active: 0
     limitLoopCount: 0
   randomCfg:
     active: 0
     randomClips: []
   startCfg:
     delay: 0
-    fadeInDuration: 1
+    fadeInDuration: 0
   limitCfg:
-    maxInstancePertime: 1
+    maxInstancePertime: 0
   limitPerFrameCfg:
-    active: 1
-    maxInstance: 1
+    active: 0
+    maxInstance: 0
   stopOtherCfg:
-    active: 1
-    others:
-    - {fileID: 11400000, guid: 555fb912af0504e3d80b66b72243331a, type: 2}
-    fadeOutDuration: 1
+    active: 0
+    others: []
+    fadeOutDuration: 0
   stopBgmCfg:
     active: 0
     fadeOutDuration: 0
@@ -44,5 +42,5 @@ MonoBehaviour:
     active: 0
     fadeOutDuration: 0
   muteCfg:
-    active: 0
+    active: 1
     muteAll: 0

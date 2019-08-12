@@ -21,13 +21,21 @@ public class AudioCommand : ScriptableObject {
 	public StopOtherSetting stopOtherCfg;
 	public StopBgmSetting stopBgmCfg;
 	public StopAllSetting stopAllCfg;
+
+	[Header("Mute/Unmute")]
+	public MuteSetting muteCfg;
 	#endregion
+
 
 	#region Getting
 	///<summary> Call this to play audio </summary>
 	public void Execute() {
-		if(AudioManager.HasInstance())
+		if(AudioManager.HasInstance()) {
 			AudioManager.Instance.Play(this);
+		}
+		else {
+			Log.Warning(false, this, "No AudioManager instance on scene. Drag one to the scene");
+		}
 	}
 
 	/// Base on random setting ... it will return the clip to set to AudioSource
@@ -47,29 +55,29 @@ public class AudioCommand : ScriptableObject {
 	//-----------------------------
 	//------------ AudioPlayer use
 	[System.Serializable]
-	public class BasicSetting {
+	public struct BasicSetting {
 		/// Set to false if we use the command for other purpose, not playAudio
-		public bool activePlayAudio = true;
+		public bool activePlayAudio;
 		public AudioClip clip;
 		public AudioMixerGroup mixerGroup;
 		public AudioClipType clipType;
 	}
 
 	[System.Serializable]
-	public class LoopSetting {
-		public bool active = false;
+	public struct LoopSetting {
+		public bool active;
 		/// If we only want it to play a limit loop, set it here. 0 = infinite loop
 		public int limitLoopCount;
 	}
 
 	[System.Serializable]
-	public class RandomSetting {
-		public bool active = false;
+	public struct RandomSetting {
+		public bool active;
 		public AudioClip[] randomClips;
 	}
 
 	[System.Serializable]
-	public class StartSetting {
+	public struct StartSetting {
 		public float delay;
 		public float fadeInDuration;
 	}
@@ -78,33 +86,39 @@ public class AudioCommand : ScriptableObject {
 	//------------ AudioManager use
 
 	[System.Serializable]
-	public class LimitSetting {
-		public int maxInstancePertime = 0;
+	public struct LimitSetting {
+		public int maxInstancePertime;
 	}
 
 	[System.Serializable]
-	public class LimitPerFrameSetting {
-		public bool active = true;
-		public int maxInstance = 1;
+	public struct LimitPerFrameSetting {
+		public bool active;
+		public int maxInstance;
 	}
 
 	[System.Serializable]
-	public class StopOtherSetting {
-		public bool active = false;
+	public struct StopOtherSetting {
+		public bool active;
 		public AudioCommand[] others;
-		public float fadeOutDuration = 0f;
-	}
-
-	[System.Serializable]
-	public class StopBgmSetting {
-		public bool active = false;
-		public float fadeOutDuration = 0f;
-	}
-
-	[System.Serializable]
-	public class StopAllSetting {
-		public bool active = false;
 		public float fadeOutDuration;
+	}
+
+	[System.Serializable]
+	public struct StopBgmSetting {
+		public bool active;
+		public float fadeOutDuration;
+	}
+
+	[System.Serializable]
+	public struct StopAllSetting {
+		public bool active;
+		public float fadeOutDuration;
+	}
+
+	[System.Serializable]
+	public struct MuteSetting {
+		public bool active;
+		public bool muteAll;
 	}
 	#endregion//Classes
 }

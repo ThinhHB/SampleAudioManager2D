@@ -109,6 +109,10 @@ public class AudioManager : MonoSingleton<AudioManager> {
 				Log.Info(cmd, "Audio [{0}], time {1}, player[{2}]", cmd.name, Time.time, readyPlayer.name);
 			}
 		}
+		//----- Mute
+		if(cmd.muteCfg.active) {
+			ActiveVolumeAll(!cmd.muteCfg.muteAll);
+		}
 	}
 	#endregion//Public
 

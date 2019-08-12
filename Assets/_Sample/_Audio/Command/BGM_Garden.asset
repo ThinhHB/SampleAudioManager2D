@@ -28,7 +28,7 @@ MonoBehaviour:
     delay: 0
     fadeInDuration: 1
   limitCfg:
-    maxInstancePertime: 0
+    maxInstancePertime: 1
   limitPerFrameCfg:
     active: 1
     maxInstance: 1
@@ -43,3 +43,6 @@ MonoBehaviour:
   stopAllCfg:
     active: 0
     fadeOutDuration: 0
+  muteCfg:
+    active: 0
+    muteAll: 0
