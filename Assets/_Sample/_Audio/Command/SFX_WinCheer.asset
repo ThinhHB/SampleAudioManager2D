@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345d652e1734a45458788f5c64ddcda3, type: 3}
+  m_Name: SFX_WinCheer
+  m_EditorClassIdentifier: 
+  basicCfg:
+    activePlayAudio: 1
+    clip: {fileID: 8300000, guid: 840688a5232b30e4ca6515cc6f15f786, type: 3}
+    mixerGroup: {fileID: 243328591983899810, guid: 212b24c27efd74f4e9b103b22e1089b2,
+      type: 2}
+    clipType: 0
+  loopCfg:
+    active: 0
+    limitLoopCount: 0
+  randomCfg:
+    active: 0
+    randomClips: []
+  startCfg:
+    delay: 0
+    fadeInDuration: 0
+  limitCfg:
+    maxInstancePertime: 0
+  limitPerFrameCfg:
+    active: 1
+    maxInstance: 1
+  stopOtherCfg:
+    active: 0
+    others: []
+    fadeOutDuration: 0
+  stopBgmCfg:
+    active: 0
+    fadeOutDuration: 0
+  stopAllCfg:
+    active: 0
+    fadeOutDuration: 0
