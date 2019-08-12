@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1184239888605963451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1832699325424310888}
+  - component: {fileID: 8798208434734281008}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1832699325424310888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184239888605963451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34979743, y: -0.21905355, z: 3.612889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8798208434734281008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184239888605963451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5550979da629a9a4d9fe63168c5f7ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyThisObject: 1
+  volumeAdjustor:
+    mixer: {fileID: 24100000, guid: 212b24c27efd74f4e9b103b22e1089b2, type: 2}
+    masterVolumeParameterName: MasterVol
+    bgmVolumeParameterName: BGMVol
+    sfxVolumeParameterName: SFXVol
+    maxVolumeDB: 0
+    minVolumeDB: -80
+  logWarnings: 0
+  logAudioNameOnPlay: 0
+  logButtonClick: 0
+  logToggleClick: 0
+  logPlayAudioOnStart: 0
+  logPlayAudioRequester: 0
